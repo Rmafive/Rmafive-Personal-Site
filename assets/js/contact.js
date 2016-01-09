@@ -10,12 +10,13 @@ var contactForm = document.querySelector('form'),
         str += String.fromCharCode(parseInt(hex.substr(i, 2), 16)); 
       return str;}
 
+    var hidden=hex2a('2f2f666f726d73707265652e696f2f706173732e746f2e726f6265727440676d61696c2e636f6d');
+    contactForm.action = hidden;
     sendButton.addEventListener('click', function(event){
       event.preventDefault(); // prevent the form to do the post.
 
       sendButton.innerHTML = 'sending..';
       var xhr = new XMLHttpRequest();
-      var hidden=hex2a('2f2f666f726d73707265652e696f2f706173732e746f2e726f6265727440676d61696c2e636f6d');
       xhr.open('POST', hidden, true);
       xhr.setRequestHeader("Accept", "application/json")
       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
