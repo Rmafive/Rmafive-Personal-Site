@@ -4,13 +4,18 @@ var contactForm = document.querySelector('form'),
     textAreaMessage = contactForm.querySelector('[name="message"]'),
     sendButton = contactForm.querySelector('#submit-contact');
 
+    function hex2a(hex){
+      var str = '';
+      for (var i = 0; i < hex.length; i += 2) 
+        str += String.fromCharCode(parseInt(hex.substr(i, 2), 16)); 
+      return str;}
+
     sendButton.addEventListener('click', function(event){
       event.preventDefault(); // prevent the form to do the post.
 
       sendButton.innerHTML = 'sending..';
-
       var xhr = new XMLHttpRequest();
-      xhr.open('POST', '//formspree.io/%70%61%73%73%2e%74%6f%2e%72%6f%62%65%72%74&#64%67%6d%61%69%6c%2e%63%6f%6d', true);
+      xhr.open('POST', hex2a('2f2f666f726d73707265652e696f2f706173732e746f2e726f6265727440676d61696c2e636f6d'), true);
       xhr.setRequestHeader("Accept", "application/json")
       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
 
