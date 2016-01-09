@@ -22,6 +22,7 @@ var contactForm = document.querySelector('form'),
       xhr.onloadend = function (res) {
         if (res.target.status === 200){
           sendButton.innerHTML = 'Message sent!';
+          sendButton.style = "background-color: #42A842"
         }
         else {
           sendButton.innerHTML = 'Error!';
