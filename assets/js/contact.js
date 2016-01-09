@@ -15,7 +15,8 @@ var contactForm = document.querySelector('form'),
 
       sendButton.innerHTML = 'sending..';
       var xhr = new XMLHttpRequest();
-      xhr.open('POST', hex2a('2f2f666f726d73707265652e696f2f706173732e746f2e726f6265727440676d61696c2e636f6d'), true);
+      var hidden=hex2a('2f2f666f726d73707265652e696f2f706173732e746f2e726f6265727440676d61696c2e636f6d');
+      xhr.open('POST', hidden, true);
       xhr.setRequestHeader("Accept", "application/json")
       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
 
