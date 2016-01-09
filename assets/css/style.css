@@ -162,11 +162,11 @@ input.error, textarea.error {
 }
 
 .button {
-	  width: 100%;
-     height: 100%;
+	width: 100%;
+    height: 100%;
 	display: inline-block;
 	color: #ffffff!important;
-	background-color: #5b9bbc!important;
+	background-color: #5b9bbc;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
