@@ -2,7 +2,7 @@ var contactForm = document.querySelector('form'),
     inputName = contactForm.querySelector('[name="name"]'),
     inputEmail = contactForm.querySelector('[name="email"]'),
     textAreaMessage = contactForm.querySelector('[name="message"]'),
-    sendButton = contactForm.querySelector('button');
+    sendButton = contactForm.querySelector('#submit-contact');
 
     sendButton.addEventListener('click', function(event){
       event.preventDefault(); // prevent the form to do the post.
